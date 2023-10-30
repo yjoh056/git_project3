@@ -1,5 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;700;800;900&display=swap');
 
+$url-image: "../image";
+
 * {
     box-sizing: border-box;
     text-shadow: none;
@@ -11,6 +13,7 @@ html,
 body {
     overflow-x: hidden;
     background: black;
+    margin: 0;
 }
 
 html {
@@ -74,10 +77,6 @@ body {
             outline: none;
         }
     }
-}
-
-img {
-    max-width: 100%;
 }
 
 fieldset {

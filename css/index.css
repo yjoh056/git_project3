@@ -11,6 +11,7 @@ html,
 body {
   overflow-x: hidden;
   background: black;
+  margin: 0;
 }
 
 html {
@@ -50,7 +51,7 @@ body a {
   background: #000;
   border: none;
   border-style: none;
-  border-bottom: 1px solid #767676;
+  border-bottom: 1px solid #8a8a8a;
   cursor: text;
 }
 
@@ -63,14 +64,10 @@ body a {
 }
 #main a:hover, #main a:active, #main a:visited {
   text-decoration: none;
-  color: #767676;
+  color: #8a8a8a;
 }
 #main a:focus {
   outline: none;
-}
-
-img {
-  max-width: 100%;
 }
 
 fieldset {
@@ -80,7 +77,7 @@ fieldset {
 }
 
 button {
-  color: #767676;
+  color: #8a8a8a;
   -webkit-appearance: none;
      -moz-appearance: none;
           appearance: none;
@@ -93,7 +90,7 @@ button {
 }
 #footer a:hover, #footer a:active, #footer a:visited {
   text-decoration: underline;
-  color: #767676;
+  color: #8a8a8a;
 }
 #footer a:focus {
   outline: none;
@@ -107,18 +104,70 @@ h5,
 h6 {
   font-family: "Montserrat", Helvetica, Arial, sans-serif;
   text-transform: uppercase;
+  line-height: 1.375;
+  letter-spacing: -0.08em;
+  margin: 0;
+}
+
+.h1,
+h1 {
+  line-height: 1.2;
+  font-size: 5rem;
+  font-weight: 400;
+}
+
+.h2,
+h2 {
+  font-size: 4rem;
+  font-weight: 500;
+}
+
+.h3,
+h3 {
+  font-size: 2.8rem;
+  font-weight: 700;
+}
+
+.h4,
+h4 {
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+.h5,
+h5 {
+  font-size: 2.4rem;
+  font-weight: 600;
+}
+
+.h6,
+h6 {
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+p {
+  font-size: 16px;
+  line-height: 1.5;
+  margin: 0 0 2rem 0;
 }
 
 .wrapper {
-  display: flex;
-  flex-flow: column wrap;
   position: relative;
 }
 
 .header-banner {
+  width: 100%;
   text-align: center;
   background-color: #fff;
   color: #333;
+  font-size: 1rem;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+}
+.header-banner a {
+  color: #8a8a8a;
+  font-weight: 500;
 }
 
 .pop-up-banner {
@@ -138,8 +187,22 @@ h6 {
   padding: 0.5em 1em;
 }
 
+.header {
+  margin: 0 5rem;
+}
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .header {
+    margin: 0 1rem;
+  }
+}
+@media screen and (max-width: 767px) {
+  .header {
+    margin: 0 1rem;
+  }
+}
 .header-top-container {
   width: 100%;
+  margin: 0 auto;
   display: flex;
   flex-direction: row-reverse;
   justify-content: space-between;
@@ -148,6 +211,17 @@ h6 {
 .header-top-user-menu {
   display: flex;
   flex-direction: row-reverse;
+  gap: 2rem;
+}
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .header-top-user-menu {
+    display: none;
+  }
+}
+@media screen and (max-width: 767px) {
+  .header-top-user-menu {
+    display: none;
+  }
 }
 .header-top-utillity-search legend {
   text-indent: -99999999px;
@@ -155,24 +229,184 @@ h6 {
 
 #brand {
   display: flex;
+  align-items: center;
+}
+#brand a.accessible {
+  display: none;
+}
+#brand .logo a {
+  color: #ffffff;
 }
 #brand .gnb-menu-category {
   display: flex;
+  gap: 2rem;
+  align-items: flex-end;
+}
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  #brand .gnb-menu-category {
+    display: none;
+  }
+}
+@media screen and (max-width: 767px) {
+  #brand .gnb-menu-category {
+    display: none;
+  }
 }
 
-footer {
+main-container {
+  height: 910px;
+}
+@media screen and (max-width: 767px) {
+  main-container {
+    height: 410px;
+  }
+}
+
+.hero {
+  position: relative;
+  width: 100vw;
+  max-height: 1200px;
+  height: 100vw;
+  background: url("../image/092923_Desktop_A_5.jpeg") center center/cover;
+}
+.hero figure {
+  margin: 0;
+}
+.hero picture {
+  height: auto;
+}
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .hero picture {
+    height: 600px;
+    transform: translateX(-25%);
+  }
+}
+@media screen and (max-width: 767px) {
+  .hero picture {
+    height: 600px;
+    transform: translateX(-25%);
+  }
+}
+.hero img {
+  height: 100%;
+}
+
+.title {
+  position: absolute;
+  top: 2%;
+  left: 4%;
+}
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .title h2,
+  .title h3 {
+    font-size: 5rem;
+    font-weight: 700;
+  }
+}
+@media screen and (max-width: 767px) {
+  .title h2,
+  .title h3 {
+    font-size: 3rem;
+    font-weight: 700;
+  }
+}
+
+figcaption {
+  position: absolute;
+  top: 2%;
+  left: 4%;
+}
+
+section .col3-container {
+  display: flex;
+  transition: all 0.2s ease;
+}
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  section .col3-container {
+    flex-direction: column;
+  }
+}
+@media screen and (max-width: 767px) {
+  section .col3-container {
+    flex-direction: column;
+  }
+}
+section .col3-1, section .col3-2, section .col3-3 {
+  position: relative;
+  width: 33.3333333333%;
+}
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  section .col3-1, section .col3-2, section .col3-3 {
+    width: 100%;
+    height: 600px;
+  }
+}
+@media screen and (max-width: 767px) {
+  section .col3-1, section .col3-2, section .col3-3 {
+    width: 100%;
+    height: auto;
+  }
+}
+section .col3-1 figure, section .col3-2 figure, section .col3-3 figure {
+  margin: 0;
+}
+section .col3-1 img, section .col3-2 img, section .col3-3 img {
+  width: 100%;
+}
+section .col2-container {
+  display: flex;
+  width: 100%;
+}
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  section .col2-container {
+    flex-direction: column;
+  }
+}
+@media screen and (max-width: 767px) {
+  section .col2-container {
+    flex-direction: column;
+  }
+}
+section .col2-1, section .col2-2 {
+  position: relative;
+}
+section .col2-1 figure, section .col2-2 figure {
+  margin: 0;
+}
+section .col2-1 img, section .col2-2 img {
+  width: 100%;
+  height: 100%;
+}
+
+.footer {
   padding: 1em 3em;
-  display: flex;
 }
-footer-container {
+.footer-newslatter {
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
+  gap: 3rem;
 }
-footer-newslatter {
+.footer-newslatter .newsletter-signup {
   display: flex;
-  flex-direction: column;
+  gap: 2rem;
 }
-footer-links {
+.footer-links-first, .footer-links-second, .footer-links-third {
   display: flex;
-  flex-direction: column;
+  gap: 3rem;
+}
+.footer-links-first li:first-child a, .footer-links-second li:first-child a, .footer-links-third li:first-child a {
+  color: #ffffff;
+}
+.footer-copyright {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+.footer-copyright .pull-right {
+  display: flex;
+  gap: 5rem;
+}
+.footer-copyright .pull-left {
+  display: flex;
+  gap: 5rem;
 }/*# sourceMappingURL=index.css.map */
