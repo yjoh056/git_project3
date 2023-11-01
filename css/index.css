@@ -172,17 +172,43 @@ p {
 
 .pop-up-banner {
   display: block;
-  display: none;
-  width: 300px;
-  height: 240px;
+  width: 416px;
+  height: 273px;
   position: absolute;
   top: 10%;
-  left: 60%;
+  right: 10%;
   background: #fff;
-  padding: 2em 3em;
+  z-index: 999;
+}
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .pop-up-banner {
+    right: 5%;
+  }
+}
+@media screen and (max-width: 767px) {
+  .pop-up-banner {
+    right: 7%;
+  }
+}
+.pop-up-banner .box-top {
+  width: 100%;
+  height: auto;
+  background-color: black;
+  padding: 0.5rem 3rem;
+  padding-top: 2rem;
+}
+.pop-up-banner .box-top h3 {
+  color: #ffffff;
+}
+.pop-up-banner .box-body {
+  padding: 1.5em 3em;
+}
+.pop-up-banner .box-body p {
+  margin-bottom: 1rem;
 }
 .pop-up-banner button {
-  margin-top: 1rem;
+  position: absolute;
+  right: 10%;
   background: black;
   padding: 0.5em 1em;
 }
@@ -265,7 +291,7 @@ main-container {
 .hero {
   position: relative;
   width: 100vw;
-  max-height: 1200px;
+  max-height: 940px;
   height: 100vw;
   background: url("../image/092923_Desktop_A_5.jpeg") center center/cover;
 }

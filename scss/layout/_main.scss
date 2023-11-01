@@ -19,17 +19,43 @@
 
 .pop-up-banner {
     display: block;
-    display: none;
-    width: 300px;
-    height: 240px;
+    // display: none;
+    width: 416px;
+    height: 273px;
     position: absolute;
     top: 10%;
-    left: 60%;
+    right: 10%;
     background: #fff;
-    padding: 2em 3em;
+    z-index: 999;
+
+    @include mq('md') {
+        right: 5%;
+    }
+
+    @include mq('sm') {
+        right: 7%;
+    }
+
+    .box-top {
+        width: 100%;
+        height: auto;
+        background-color: black;
+        padding: 0.5rem 3rem;
+        padding-top: 2rem;
+
+        h3 {
+            color: $color-white;
+        }
+    }
+
+    .box-body {
+        padding: 1.5em 3em;
+        p{margin-bottom: 1rem;}
+    }
 
     button {
-        margin-top: 1rem;
+        position: absolute;
+        right: 10%;
         background: black;
         padding: 0.5em 1em;
     }
@@ -110,9 +136,8 @@
 main {
     &-container {
         height: 910px;
-        @include mq('md') {
 
-        }
+        @include mq('md') {}
 
         @include mq('sm') {
             height: 410px;
@@ -172,11 +197,12 @@ main {
     }
 }
 
-figcaption{
+figcaption {
     position: absolute;
     top: 2%;
     left: 4%;
 }
+
 section {
     .col3 {
         &-container {
